@@ -37,19 +37,19 @@ class Sidenav extends React.Component {
       <Styles>
         <ListGroup variant='flush'classNamke="sidenav-list">
           <ListGroup.Item className="sidenav-item">
-            <a href="#"><AiFillLinkedin className='sidenav-icon'/></a>
+            <a href="https://www.linkedin.com/in/cortlyn-rosser/" target='blank'><AiFillLinkedin className='sidenav-icon'/></a>
           </ListGroup.Item>
           <ListGroup.Item className="sidenav-item">
-          <a href="#"><AiFillGithub className='sidenav-icon'/></a>
+          <a href="https://github.com/coryrosser" target='blank'><AiFillGithub className='sidenav-icon'/></a>
           </ListGroup.Item>
           <ListGroup.Item className="sidenav-item">
-            <a href="#"><AiFillTwitterCircle className='sidenav-icon'/></a>
+            <a href="https://twitter.com/cortlynrosser" target='blank'><AiFillTwitterCircle className='sidenav-icon'/></a>
           </ListGroup.Item>
           <ListGroup.Item className="sidenav-item">
-            <a href="#"><AiOutlineMail className='sidenav-icon'/></a>
+            <a href="#" target='blank'><AiOutlineMail className='sidenav-icon'/></a>
           </ListGroup.Item>
           <ListGroup.Item className="sidenav-item">
-            <a href="#"><TiDocumentText className='sidenav-icon'/></a>
+            <a href="#" target='blank'><TiDocumentText className='sidenav-icon'/></a>
           </ListGroup.Item>
           </ListGroup>
       </Styles>

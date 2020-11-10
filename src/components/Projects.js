@@ -1,8 +1,17 @@
 import React from 'react'
-import {} from 'react-bootstrap'
+
 import styled from 'styled-components'
+import Vistrack from '../assets/Vistrack.PNG'
+import devbook from '../assets/devbook.png'
+import covidtracker from '../assets/covidtracker.PNG'
+import chstudio from '../assets/ChStudio.PNG'
+
+import { DiReact, DiJavascript1, DiRuby} from 'react-icons/di'
 
 const Styles = styled.div`
+.tech-icon {
+  color: #f7f7f7;
+}
 /* Hexagons */
 #hexGrid {
   overflow: hidden;
@@ -60,10 +69,10 @@ const Styles = styled.div`
 .hex p {
   margin: 0;
   width: 102%;
-  left: -1%;  /* prevent line on the right where background doesn't cover image */
+  left: -1%;  
   padding: 5%;
   box-sizing: border-box;
-  background-color: rgba(0, 128, 128, 0.8);
+  background-color: rgba(214, 40, 40, 0.7);
   font-weight: 300;
   transition: transform .2s ease-out, opacity .3s ease-out;
 }
@@ -71,7 +80,7 @@ const Styles = styled.div`
 .hex h1 {
   bottom: 50%;
   padding-top: 50%;
-  font-size: 1.5em;
+  font-size: 3em;
   z-index: 1;
   transform: translateY(-100%) translatez(-1px);
 }
@@ -93,14 +102,12 @@ const Styles = styled.div`
 }
 
 
-/*** HOVER EFFECT  **********************************************************************/
 
 .hexIn:hover h1, .hexIn:focus h1, .hexIn:hover p, .hexIn:focus p {
   transform: translateY(0%) translatez(-1px);
 }
 
 
-/*** SPACING AND SIZING *****************************************************************/
 
 @media (min-width:1201px) {  /* <- 2-3  hexagons per row */
   .hex {
@@ -162,37 +169,11 @@ const Styles = styled.div`
   }
 }
 
-/* End Hexagons */
-/* fork on github button */
-#fork{
-  font-family: 'Raleway', sans-serif;
-  position:fixed;
-  top:0;
-  left:0;
-  color:#000;
-  text-decoration:none;
-  border:1px solid #000;
-  padding:.5em .7em;
-  margin:1%;
-  transition: color .5s;
-  overflow:hidden;
-}
-#fork:before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 130%; height: 100%;
-  background: #000;
-  z-index: -1;
-  transform-origin:0 0 ;
-  transform:translateX(-100%) skewX(-45deg);
-  transition: transform .5s;
-}
-#fork:hover {
-  color: #fff;
-}
-#fork:hover:before {
-  transform: translateX(0) skewX(-45deg);
+.project-link {
+  font-size: 1.225rem;
+  left: 11vw;
+  text-decoration: none;
+  color: #f7f7f7;
 }
 `
 
@@ -202,226 +183,33 @@ const Projects = (props) => {
       <ul id="hexGrid">
   <li className="hex">
     <a className="hexIn" href="#">
-      <img src="https://farm9.staticflickr.com/8461/8048823381_0fbc2d8efb.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
+      <img src={Vistrack} alt="" />
+      <h1>Vistrack</h1>
+
+      <p>
+      VisTrack is a Data Visualization app makes Data Entry Simple and Engaging. VisTrack creates beautiful Charts from your data via manual entry or by uploading any CSV/ Excel file. Currently planning and working on new features!
+      </p>
     </a>
   </li>
   <li className="hex">
     <a className="hexIn" href="#">
-      <img src="https://farm5.staticflickr.com/4144/5053682635_b348b24698.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
+      <img src={devbook} alt="" />
+      <h1>Devbook</h1>
+      <p>DevBook is an app created to give developers a place to share their work. Whether it's a basic script, CLI app, or full stack web app, you can proudly upload your project with Project Name, Images, Description, links to repository on Github</p>
     </a>
   </li>
   <li className="hex">
     <a className="hexIn" href="#">
-      <img src="https://farm3.staticflickr.com/2827/10384422264_d9c7299146.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
+      <img src={chstudio} alt="" />
+      <h1>Chad Hoffman Studios</h1>
+      <p>Chad Hoffman Studios is a professional photography site built to sell photography prints and services to private users and Environmental Consulting Firms. The website is regularly updated and maintained. Currently Deployed on Heroku until a proper domain is secured.</p>
     </a>
   </li>
   <li className="hex">
     <a className="hexIn" href="#">
-      <img src="https://farm7.staticflickr.com/6217/6216951796_e50778255c.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm7.staticflickr.com/6083/6055581292_d94c2d90e3.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm3.staticflickr.com/2827/10384422264_d9c7299146.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm8.staticflickr.com/7187/6895047173_d4b1a0d798.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm4.staticflickr.com/3766/12953056854_b8cdf14f21.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm7.staticflickr.com/6139/5986939269_10721b8017.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm4.staticflickr.com/3165/5733278274_2626612c70.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm8.staticflickr.com/7163/6822904141_50277565c3.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm4.staticflickr.com/3771/13199704015_72aa535bd7.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm7.staticflickr.com/6083/6055581292_d94c2d90e3.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm8.staticflickr.com/7187/6895047173_d4b1a0d798.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm3.staticflickr.com/2878/10944255073_973d2cd25c.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm9.staticflickr.com/8461/8048823381_0fbc2d8efb.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm5.staticflickr.com/4144/5053682635_b348b24698.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm3.staticflickr.com/2827/10384422264_d9c7299146.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm7.staticflickr.com/6217/6216951796_e50778255c.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm7.staticflickr.com/6083/6055581292_d94c2d90e3.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm3.staticflickr.com/2827/10384422264_d9c7299146.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm8.staticflickr.com/7187/6895047173_d4b1a0d798.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm4.staticflickr.com/3766/12953056854_b8cdf14f21.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm3.staticflickr.com/2878/10944255073_973d2cd25c.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm9.staticflickr.com/8461/8048823381_0fbc2d8efb.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm5.staticflickr.com/4144/5053682635_b348b24698.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm3.staticflickr.com/2827/10384422264_d9c7299146.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm7.staticflickr.com/6217/6216951796_e50778255c.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm7.staticflickr.com/6083/6055581292_d94c2d90e3.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm3.staticflickr.com/2827/10384422264_d9c7299146.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm8.staticflickr.com/7187/6895047173_d4b1a0d798.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
-      <img src="https://farm4.staticflickr.com/3766/12953056854_b8cdf14f21.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
+      <img src={covidtracker} alt="" />
+      <h1>Covid-19 Tracker</h1>
+      <p>A small application that uses a public API to give you up-to-date information on Covid-19 cases. Users are able to pick from any country to view the number of Cases, Recoveries, and deaths by area.</p>
     </a>
   </li>
 </ul>
