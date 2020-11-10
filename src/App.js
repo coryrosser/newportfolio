@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import Sidenav from './components/Sidenav'
 import NeonName from './components/NeonName'
 import Projects from './components/Projects'
+import ViewPicker from './components/ViewPicker'
 
 const Styles = styled.div`
   height: 100vh;
@@ -21,10 +22,14 @@ const Styles = styled.div`
 
   .top-row {
     // background: rgba(255,255,255,0.6);
-    height: 75vh;
+    height: 50vh;
     justify-content: center;
   }
-  .bottom-row {
+  .mid-row {
+    background: none;
+    height: 10vh;
+    width: 100%;
+    border: white solid 1px;
   }
   .content-col {
     height: 100vh;
@@ -32,21 +37,27 @@ const Styles = styled.div`
   }
 `
 
-function App() {
-  return (
-    <Styles>
-      <Row className='container-row'>
-        <Col xs={1} md={1} >
-          <Sidenav />
-        </Col>
-        <Col xs={12} md={11} 
-        className="content-col">
-        <Row className='top-row'> <NeonName /></Row>
-        <Projects/>
-        </Col> 
-      </Row>
-    </Styles>
-  );
+class App extends React.Component {
+  state = {
+    currentView: 0,
+  }
+  render(){
+    return (
+      <Styles>
+        <Row className='container-row'>
+          <Col xs={1} md={1} >
+            <Sidenav />
+          </Col>
+          <Col xs={12} md={11} 
+          className="content-col">
+          <Row className='top-row'> <NeonName /></Row>
+          <Row className='mid-row'> <ViewPicker/></Row>
+          <Projects/>
+          </Col> 
+        </Row>
+      </Styles>
+    );
+  }
 }
 
 export default App;
