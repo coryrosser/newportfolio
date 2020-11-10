@@ -3,8 +3,8 @@ import {Row, Col} from 'react-bootstrap'
 import styled from 'styled-components'
 
 import Sidenav from './components/Sidenav'
-import Name from './components/Name'
 import NeonName from './components/NeonName'
+import Projects from './components/Projects'
 
 const Styles = styled.div`
   height: 100vh;
@@ -25,8 +25,10 @@ const Styles = styled.div`
     justify-content: center;
   }
   .bottom-row {
-    background: rgba(255,255,255,0.6);
-    height: 25vh;
+  }
+  .content-col {
+    height: 100vh;
+    overflow-y: scroll;
   }
 `
 
@@ -34,13 +36,14 @@ function App() {
   return (
     <Styles>
       <Row className='container-row'>
-        <Col xs={1} md={1}>
+        <Col xs={1} md={1} >
           <Sidenav />
         </Col>
         <Col xs={12} md={11} 
         className="content-col">
         <Row className='top-row'> <NeonName /></Row>
-        <Row className='bottom-row'> Bottom </Row></Col> 
+        <Projects/>
+        </Col> 
       </Row>
     </Styles>
   );
