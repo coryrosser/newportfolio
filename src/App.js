@@ -1,13 +1,15 @@
 import React from 'react'
 import {Row, Col} from 'react-bootstrap'
 import styled from 'styled-components'
+
 import Sidenav from './components/Sidenav'
+import Name from './components/Name'
+import NeonName from './components/NeonName'
 
 const Styles = styled.div`
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
-  background: url('https://bit.ly/2IrgH7R');
+  background: url('https://bit.ly/35jfjN8');
   background-size: cover;
 
   .container-row {
@@ -18,12 +20,13 @@ const Styles = styled.div`
   }
 
   .top-row {
-    background: rgba(255,255,255,0.6);
-    height: 50vh;
+    // background: rgba(255,255,255,0.6);
+    height: 75vh;
+    justify-content: center;
   }
   .bottom-row {
     background: rgba(255,255,255,0.6);
-    height: 50vh;
+    height: 25vh;
   }
 `
 
@@ -36,7 +39,7 @@ function App() {
         </Col>
         <Col xs={12} md={11} 
         className="content-col">
-        <Row className='top-row'> Top</Row>
+        <Row className='top-row'> <NeonName /></Row>
         <Row className='bottom-row'> Bottom </Row></Col> 
       </Row>
     </Styles>
