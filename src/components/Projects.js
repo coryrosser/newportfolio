@@ -9,6 +9,7 @@ import chstudio from '../assets/ChStudio.PNG'
 import { DiReact, DiJavascript1, DiRuby} from 'react-icons/di'
 
 const Styles = styled.div`
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 .tech-icon {
   color: #f7f7f7;
 }
@@ -18,7 +19,7 @@ const Styles = styled.div`
   width: 90%;
   margin: 0 auto;
   padding: 0.866% 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Montserrat";
   font-size: 15px;
 }
 

@@ -3,7 +3,37 @@ import {Row, Col} from 'react-bootstrap'
 import styled from 'styled-components'
 
 const Styles = styled.div`
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+font-family: "Montserrat";
   color: white;
+
+  .picker-row{
+    height: 7vh;
+    width: 100%;
+    font-size: 2rem;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+  }
+  .picker-item {
+    &:hover {
+      font-size: 2.25rem;
+      transition: 0.3s;
+    }
+  }
+  .active-item {
+    color: #fff;
+    font-size: 2.25rem;
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 40px #0ff,
+      0 0 80px #0ff,
+      0 0 90px #0ff,
+      0 0 100px #0ff,
+      0 0 150px #0ff;
+  }
 `
 
 
@@ -11,14 +41,15 @@ const ViewPicker = (props) => {
   return (
     <Styles>
       <Row className='picker-row'>
-        <Col>
-         View1
+        <Col xs={6}>
+         <p 
+         onClick={() => {props.handleViewChange(0)}}
+         className={props.view === 0 ? 'picker-item active-item' : 'picker-item'}>Projects</p>
         </Col>
-        <Col>
-         View1
-        </Col>
-        <Col>
-         View1
+        <Col xs={6}>
+        <p 
+        onClick={() => {props.handleViewChange(1)}}
+        className={props.view === 1 ? 'picker-item active-item' : 'picker-item'}>Blogs</p>
         </Col>
       </Row>
     </Styles>

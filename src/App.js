@@ -41,6 +41,10 @@ class App extends React.Component {
   state = {
     currentView: 0,
   }
+  handleViewChange = (num) => {
+    this.setState({currentView: num})
+  }
+
   render(){
     return (
       <Styles>
@@ -51,8 +55,14 @@ class App extends React.Component {
           <Col xs={12} md={11} 
           className="content-col">
           <Row className='top-row'> <NeonName /></Row>
-          <Row className='mid-row'> <ViewPicker/></Row>
-          <Projects/>
+           <ViewPicker 
+           handleViewChange={this.handleViewChange}
+           view={this.state.currentView}/>
+          {this.state.currentView === 0 ?
+          <Projects/> : 
+          
+          
+          }
           </Col> 
         </Row>
       </Styles>
