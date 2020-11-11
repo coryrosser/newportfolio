@@ -5,9 +5,7 @@ import styled from 'styled-components'
 
 const Styles = styled.div`
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
-body {
-	background-color: #111;
-}
+
 
 .title {
 	font-family: "Montserrat";
@@ -32,7 +30,15 @@ h1 {
 	line-height: .8;
 	margin: 10px 0;
 }
-
+p {
+  font-size: 1.75rem;
+  color: #f7f7f7;
+}
+@media only screen and (max-width: 600px) {
+	h1 {
+		font-size: 9vh;
+	}
+}
 
 `
 
@@ -41,7 +47,7 @@ const NeonName = (props) => {
     <Styles>
       <div class="title">
         <h1>Hi I'm<br/>Cortlyn Rosser</h1>
-
+        <p>Software Developer in Atlanta, GA</p>
       </div>
     </Styles>
   )

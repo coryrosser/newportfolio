@@ -6,7 +6,7 @@ import devbook from '../assets/devbook.png'
 import covidtracker from '../assets/covidtracker.PNG'
 import chstudio from '../assets/ChStudio.PNG'
 
-import { DiReact, DiJavascript1, DiRuby} from 'react-icons/di'
+// import { DiReact, DiJavascript1, DiRuby} from 'react-icons/di'
 
 const Styles = styled.div`
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
@@ -101,6 +101,10 @@ const Styles = styled.div`
   padding-bottom: 50%;
   transform: translateY(100%) translatez(-1px);
 }
+.link-1 {
+  right: 41%;
+  top: 40%;
+}
 
 
 
@@ -183,35 +187,40 @@ const Projects = (props) => {
     <Styles>
       <ul id="hexGrid">
   <li className="hex">
-    <a className="hexIn" href="#">
+    <div className="hexIn" href="#">
       <img src={Vistrack} alt="" />
       <h1>Vistrack</h1>
-
+      
       <p>
-      VisTrack is a Data Visualization app makes Data Entry Simple and Engaging. VisTrack creates beautiful Charts from your data via manual entry or by uploading any CSV/ Excel file. Currently planning and working on new features!
+      VisTrack is a Data Visualization app makes Data Entry Simple and Engaging. VisTrack creates beautiful Charts from your data via manual entry or by uploading any CSV/ Excel file. 
+
+      <a className='link-1'>Live Demo</a> 
+      <br/>  
+      <a className='link-2'>Github</a>
       </p>
-    </a>
+    </div>
   </li>
   <li className="hex">
-    <a className="hexIn" href="#">
-      <img src={devbook} alt="" />
-      <h1>Devbook</h1>
-      <p>DevBook is an app created to give developers a place to share their work. Whether it's a basic script, CLI app, or full stack web app, you can proudly upload your project with Project Name, Images, Description, links to repository on Github</p>
-    </a>
-  </li>
-  <li className="hex">
-    <a className="hexIn" href="#">
+    <div className="hexIn" href="#">
       <img src={chstudio} alt="" />
       <h1>Chad Hoffman Studios</h1>
-      <p>Chad Hoffman Studios is a professional photography site built to sell photography prints and services to private users and Environmental Consulting Firms. The website is regularly updated and maintained. Currently Deployed on Heroku until a proper domain is secured.</p>
-    </a>
+      <p>Chad Hoffman Studios is a professional photography site built to sell photography prints and services.</p>
+    </div>
   </li>
   <li className="hex">
-    <a className="hexIn" href="#">
+    <div className="hexIn" href="#">
       <img src={covidtracker} alt="" />
       <h1>Covid-19 Tracker</h1>
       <p>A small application that uses a public API to give you up-to-date information on Covid-19 cases. Users are able to pick from any country to view the number of Cases, Recoveries, and deaths by area.</p>
-    </a>
+    </div>
+  </li>
+  <li className="hex">
+    <div className="hexIn" href="#">
+      <img src={devbook} alt="" />
+      <h1>Devbook</h1>
+      <p>DevBook is an app created to give developers a place to share their work. Whether it's a basic script, CLI app, or full stack web app, you can proudly upload your project with Project Name, Images, Description, links to repository on Github</p>
+      
+    </div>
   </li>
 </ul>
     </Styles>

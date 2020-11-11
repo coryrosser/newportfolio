@@ -34,10 +34,17 @@ const Styles = styled.div`
   .sidenav-icon {
     font-size: 4vh;
     &:hover {
-      color: #e63946;
+      color: #ef476f;
       transition: 0.3s;
       font-size: 5vh;
 
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    * {
+      visibility: hidden;
+      height: .01px;
+      width: .01px;
     }
   }
 `
@@ -64,7 +71,7 @@ class Sidenav extends React.Component {
             <p> coryrosser@gmail.com </p>
           </ListGroup.Item>
           <ListGroup.Item className="sidenav-item">
-            <a href="#" target='blank'><TiDocumentText className='sidenav-icon'/></a>
+            <a href="https://drive.google.com/file/d/1UapdPrT6DJ-ND1al4n70gBtf1dvaxkJQ/view?usp=sharing" target='blank'><TiDocumentText className='sidenav-icon'/></a>
             <p> Resume </p>
           </ListGroup.Item>
           </ListGroup>

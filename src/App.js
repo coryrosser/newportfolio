@@ -9,8 +9,8 @@ import ViewPicker from './components/ViewPicker'
 import Blogs from './components/Blogs'
 
 const Styles = styled.div`
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background: url('https://bit.ly/35jfjN8');
   background-size: cover;
 
@@ -50,7 +50,7 @@ class App extends React.Component {
     return (
       <Styles>
         <Row className='container-row'>
-          <Col xs={1} md={1} >
+          <Col xs={0} md={1} className='d-md-block d-sm-none'>
             <Sidenav />
           </Col>
           <Col xs={12} md={11} 
