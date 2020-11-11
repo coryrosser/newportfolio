@@ -16,21 +16,15 @@ const Styles = styled.div`
 
   .container-row {
     background: rgba(0,0,0,0.7);
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     margin-left: 0;
   }
 
   .top-row {
     // background: rgba(255,255,255,0.6);
-    height: 50vh;
+    height: 40vh;
     justify-content: center;
-  }
-  .mid-row {
-    background: none;
-    height: 10vh;
-    width: 100%;
-    border: white solid 1px;
   }
   .content-col {
     height: 100vh;
