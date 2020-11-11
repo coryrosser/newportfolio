@@ -6,6 +6,7 @@ import Sidenav from './components/Sidenav'
 import NeonName from './components/NeonName'
 import Projects from './components/Projects'
 import ViewPicker from './components/ViewPicker'
+import Blogs from './components/Blogs'
 
 const Styles = styled.div`
   height: 100vh;
@@ -60,7 +61,7 @@ class App extends React.Component {
            view={this.state.currentView}/>
           {this.state.currentView === 0 ?
           <Projects/> : 
-          
+          <Blogs />
           
           }
           </Col> 
