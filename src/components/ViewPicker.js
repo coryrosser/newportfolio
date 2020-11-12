@@ -41,15 +41,20 @@ const ViewPicker = (props) => {
   return (
     <Styles>
       <Row className='picker-row'>
-        <Col xs={6}>
+        <Col xs={4}>
          <p 
          onClick={() => {props.handleViewChange(0)}}
          className={props.view === 0 ? 'picker-item active-item' : 'picker-item'}>Projects</p>
         </Col>
-        <Col xs={6}>
+        <Col xs={4}>
         <p 
         onClick={() => {props.handleViewChange(1)}}
         className={props.view === 1 ? 'picker-item active-item' : 'picker-item'}>Blogs</p>
+        </Col>
+        <Col xs={4}>
+        <p 
+        onClick={() => {props.handleViewChange(2)}}
+        className={props.view === 2 ? 'picker-item active-item' : 'picker-item'}>About Me</p>
         </Col>
       </Row>
     </Styles>

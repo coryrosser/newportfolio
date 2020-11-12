@@ -7,6 +7,7 @@ import NeonName from './components/NeonName'
 import Projects from './components/Projects'
 import ViewPicker from './components/ViewPicker'
 import Blogs from './components/Blogs'
+import About from './components/About'
 
 const Styles = styled.div`
   height: 100%;
@@ -54,8 +55,8 @@ class App extends React.Component {
            handleViewChange={this.handleViewChange}
            view={this.state.currentView}/>
           {this.state.currentView === 0 ?
-          <Projects/> : 
-          <Blogs />
+          <Projects/> : this.state.currentView === 1 ?
+          <Blogs /> : <About />
           
           }
           </Col> 
