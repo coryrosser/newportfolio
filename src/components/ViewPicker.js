@@ -4,26 +4,37 @@ import styled from 'styled-components'
 
 const Styles = styled.div`
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+@media only screen and (max-width: 600px) {
+  margin-bottom: 7vh;
+  .picker-item {
+    font-size: 3vh;
+  }
+  .active-item {
+    font-size: 3.2vh;
+  }
+}
+
 font-family: "Montserrat";
   color: white;
 
   .picker-row{
     height: 7vh;
     width: 100%;
-    font-size: 2rem;
+    font-size: 3vh;
     align-items: center;
     text-align: center;
     cursor: pointer;
   }
   .picker-item {
     &:hover {
-      font-size: 2.25rem;
+      font-size: 3.25vh;
       transition: 0.3s;
     }
   }
   .active-item {
     color: #fff;
-    font-size: 2.25rem;
+    font-size: 3.35vh;
     text-shadow:
       0 0 5px #fff,
       0 0 10px #fff,
@@ -54,7 +65,7 @@ const ViewPicker = (props) => {
         <Col xs={4}>
         <p 
         onClick={() => {props.handleViewChange(2)}}
-        className={props.view === 2 ? 'picker-item active-item' : 'picker-item'}>About Me</p>
+        className={props.view === 2 ? 'picker-item active-item' : 'picker-item'}>About</p>
         </Col>
       </Row>
     </Styles>

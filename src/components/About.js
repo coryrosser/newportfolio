@@ -8,6 +8,8 @@ const Styles = styled.div`
     border: white solid 1px;
     width: 100%;
     height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
   }
   .skills-col {
     
@@ -17,21 +19,24 @@ const Styles = styled.div`
     
     border: red solid 1px;
   }
+  .title-text {
+    
+  }
 `
 
 const About = () => {
   return (
     <Styles>
       <Row className='about-row'>
-        <Col className='skills-col'>
+        <Col sm={6} md={12} className='skills-col'>
           <Row className='skills-title-row'>
-
+            <h1 className='title-text' >Skillset</h1>
           </Row>
         </Col>
 
-        <Col className='about-col'>
+        <Col sm={6} md={12} className='about-col'>
           <Row className='about-title-row'>
-
+          <h1 className='title-text'>Skillset</h1>
           </Row>
         </Col>
       </Row>

@@ -20,7 +20,7 @@ const Styles = styled.div`
   margin: 0 auto;
   padding: 0.866% 0;
   font-family: "Montserrat";
-  font-size: 15px;
+  font-size: 2vh;
 }
 
 #hexGrid:after {
@@ -35,7 +35,7 @@ const Styles = styled.div`
   float: left;
   overflow: hidden;
   visibility: hidden;
-  outline: 1px solid transparent;  /* fix for jagged edges in FF on hover transition */
+  outline: 1px solid transparent;  
   transform: rotate(-60deg) skewY(30deg) translatez(-1px);
 }
 
@@ -81,9 +81,19 @@ const Styles = styled.div`
 .hex h1 {
   bottom: 50%;
   padding-top: 50%;
-  font-size: 3em;
+  font-size: 5vh;
   z-index: 1;
   transform: translateY(-100%) translatez(-1px);
+}
+
+@media only screen and (max-width: 600px) {
+  .hex h1 {
+    font-size: 2.5vh;
+  }
+  .hex p {
+    font-size: .5vh;
+    color: rgba(0,0,0,0);
+  }
 }
 
 .hex h1:after {
@@ -100,6 +110,7 @@ const Styles = styled.div`
   top: 50%;
   padding-bottom: 50%;
   transform: translateY(100%) translatez(-1px);
+  font-size: 2vh;
 }
 .link-1 {
   right: 41%;
