@@ -42,7 +42,7 @@ const Styles = styled.div`
 .hex * {
   position: absolute;
   visibility: visible;
-  outline: 1px solid transparent;  /* fix for jagged edges in FF on hover transition */
+  outline: 1px solid transparent;  
 }
 
 .hexIn {
@@ -56,7 +56,7 @@ const Styles = styled.div`
 }
 
 
-/*** HEX CONTENT **********************************************************************/
+
 
 .hex img {
   left: -100%;
@@ -105,11 +105,13 @@ const Styles = styled.div`
   right: 41%;
   top: 40%;
   color: #f7f7f7;
+  cursor: pointer;
 }
 .link-2 {
   top: 47%;
   right: 44%;
   color: #f7f7f7;
+  cursor: pointer;
 }
 
 
@@ -186,6 +188,7 @@ const Styles = styled.div`
   text-decoration: none;
   color: #f7f7f7;
 }
+
 `
 
 const Projects = (props) => {
