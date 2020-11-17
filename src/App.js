@@ -1,7 +1,7 @@
 import React from 'react'
 import {Row, Col} from 'react-bootstrap'
 import styled from 'styled-components'
-
+import Email from './components/Email'
 import Sidenav from './components/Sidenav'
 import NeonName from './components/NeonName'
 import Projects from './components/Projects'
@@ -17,8 +17,8 @@ const Styles = styled.div`
 
   .container-row {
     background: rgba(0,0,0,0.7);
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
     margin-left: 0;
   }
 
@@ -36,6 +36,7 @@ const Styles = styled.div`
 class App extends React.Component {
   state = {
     currentView: 0,
+    showEmail: 0,
   }
   handleViewChange = (num) => {
     this.setState({currentView: num})
@@ -57,7 +58,6 @@ class App extends React.Component {
           {this.state.currentView === 0 ?
           <Projects/> : this.state.currentView === 1 ?
           <Blogs /> : <About />
-          
           }
           </Col> 
         </Row>

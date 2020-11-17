@@ -200,6 +200,8 @@ const Styles = styled.div`
   color: #f7f7f7;
 }
 
+margin-bottom: 10vh;
+
 `
 
 const Projects = (props) => {
@@ -214,9 +216,9 @@ const Projects = (props) => {
       <p>
       VisTrack is a Data Visualization app makes Data Entry Simple and Engaging. VisTrack creates beautiful Charts from your data via manual entry or by uploading any CSV/ Excel file. 
 
-      <a className='link-1'>Live Demo</a> 
+      <a href='http://vistrack.herokuapp.com/' target='blank' className='link-1'>Live Demo</a> 
       <br/>  
-      <a className='link-2'>Github</a>
+      <a href='https://github.com/coryrosser/vistrackfrontend' target='blank' className='link-2'>Github</a>
       </p>
     </div>
   </li>
@@ -225,9 +227,9 @@ const Projects = (props) => {
       <img src={chstudio} alt="" />
       <h1>Chad Hoffman Studios</h1>
       <p>Chad Hoffman Studios is a professional photography site built to sell photography prints and services.
-      <a className='link-1'>Live Demo</a> 
+      <a href='http://chadjhoffman.herokuapp.com/' target='blank' className='link-1'>Live Demo</a> 
       <br/>  
-      <a className='link-2'>Github</a>
+      <a  href='https://github.com/coryrosser/chstudios' target='blank' className='link-2'>Github</a>
       </p>
     </div>
   </li>
@@ -235,20 +237,16 @@ const Projects = (props) => {
     <div className="hexIn" href="#">
       <img src={covidtracker} alt="" />
       <h1>Covid-19 Tracker</h1>
-      <p>A small application that uses a public API to give you up-to-date information on Covid-19 cases. Users are able to pick from any country to view the number of Cases, Recoveries, and deaths by area.
-      <a className='link-1'>Live Demo</a> 
-      <br/>  
-      <a className='link-2'>Github</a></p>
+      <p>A small application that uses a public API to give you up-to-date information on Covid-19 cases. 
+      <a href='https://github.com/coryrosser/tracker-app' target='blank' className='link-1'>Github</a> 
     </div>
   </li>
   <li className="hex">
     <div className="hexIn" href="#">
       <img src={devbook} alt="" />
       <h1>Devbook</h1>
-      <p>DevBook is an app created to give developers a place to share their work. Whether it's a basic script, CLI app, or full stack web app, you can proudly upload your project with Project Name, Images, Description, links to repository on Github
-      <a className='link-1'>Live Demo</a> 
-      <br/>  
-      <a className='link-2'>Github</a></p>
+      <p>DevBook is an app created to give developers a place to share their work. 
+      <a href='https://github.com/coryrosser/mod4frontend' target='blank' className='link-2'>Github</a></p>
       
     </div>
   </li>
