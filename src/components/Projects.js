@@ -72,7 +72,7 @@ const Styles = styled.div`
   left: -1%;  
   padding: 5%;
   box-sizing: border-box;
-  background-color: rgba(214, 40, 40, 0.7);
+  background-color: rgba(38, 70, 83, 0.9);
   font-weight: 300;
   transition: transform .2s ease-out, opacity .3s ease-out;
 }

@@ -28,13 +28,12 @@ font-family: "Montserrat";
   }
   .picker-item {
     &:hover {
-      background: rgba(239, 71, 111,0.3);
+      background: rgba(230, 57, 70,0.3);
     border-radius: 3vh;
     }
   }
   .active-item {
-    background: url('https://wallpapercave.com/wp/wp2730878.gif')!important;
-    opacity: 0.5;
+    background: rgba(230, 57, 70,0.5) !important;
     border-radius: 3vh;
 
     // color: #fff;

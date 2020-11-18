@@ -12,11 +12,11 @@ import About from './components/About'
 const Styles = styled.div`
   height: 100%;
   width: 100%;
-  background: url('https://bit.ly/35jfjN8');
+  background: url('https://bit.ly/2Hcvr9V');
   background-size: cover;
 
   .container-row {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.55);
     width: 100vw;
     height: 100vh;
     margin-left: 0;

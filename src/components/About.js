@@ -15,7 +15,7 @@ const Styles = styled.div`
   .about-row {
     color: white;
     width: 100%;
-    height: 75vh;
+    height: 50vh;
     margin-left: auto;
     margin-right: auto;
   }
@@ -111,7 +111,6 @@ const About = () => {
       
         <Col sm={6} md={12} className='skills-col'>
           <Row className='skills-title-row'>
-            <h1 className='title-text' >Skillset</h1>
           </Row>
           <Row className='skills-icon-row'>
             <Col className='icon-col' xs={4}>

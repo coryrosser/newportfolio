@@ -31,7 +31,7 @@ h1 {
 	margin: 10px 0;
 }
 p {
-  font-size: 1.75rem;
+  font-size: 3.75vh;
   color: #f7f7f7;
 }
 @media only screen and (max-width: 600px) {
