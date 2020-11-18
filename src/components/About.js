@@ -32,7 +32,6 @@ const Styles = styled.div`
   .about-title-row{
     align-items: center;
     justify-content: center;
-    border-bottom: rgba(255,255,255, 0.5) solid 1px;
     margin-bottom: 4vh;
 
     h1 {
@@ -86,7 +85,7 @@ const About = () => {
       <Row className='about-row'>
         <Col sm={6} md={12} className='about-col'>
           <Row className='about-title-row'>
-          <h1 className='title-text'>About</h1>
+          {/* <h1 className='title-text'>About</h1> */}
           </Row>
           <Row className='about-text-row'>
             <p>          Driven by a desire to learn new techniques and build creative solutions, I approach each challenge as an opportunity to learn, becoming a better developer each day. I always have a positive attitude and willingness to listen and learn. I enjoy working with with teams and benefitting from the insight of others around me, as well as offering my own unique perspective.</p>

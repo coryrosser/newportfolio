@@ -15,7 +15,6 @@ const Styles = styled.div`
 }
 /* Hexagons */
 #hexGrid {
-  overflow: hidden;
   width: 90%;
   margin: 0 auto;
   padding: 0.866% 0;
@@ -238,7 +237,7 @@ const Projects = (props) => {
       <img src={covidtracker} alt="" />
       <h1>Covid-19 Tracker</h1>
       <p>A small application that uses a public API to give you up-to-date information on Covid-19 cases. 
-      <a href='https://github.com/coryrosser/tracker-app' target='blank' className='link-1'>Github</a> 
+      <a href='https://github.com/coryrosser/tracker-app' target='blank' className='link-1'>Github</a> </p>
     </div>
   </li>
   <li className="hex">

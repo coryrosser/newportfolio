@@ -28,23 +28,28 @@ font-family: "Montserrat";
   }
   .picker-item {
     &:hover {
-      font-size: 3.25vh;
-      transition: 0.3s;
+      background: rgba(239, 71, 111,0.3);
+    border-radius: 3vh;
     }
   }
   .active-item {
-    color: #fff;
-    font-size: 3.35vh;
-    text-shadow:
-      0 0 5px #fff,
-      0 0 10px #fff,
-      0 0 20px #fff,
-      0 0 40px #f00,
-      0 0 80px #f00,
-      0 0 90px #f00,
-      0 0 100px #f00,
-      0 0 150px #f00;
+    background: url('https://wallpapercave.com/wp/wp2730878.gif')!important;
+    opacity: 0.5;
+    border-radius: 3vh;
+
+    // color: #fff;
+    // font-size: 3.35vh;
+    // text-shadow:
+    //   0 0 5px #fff,
+    //   0 0 10px #fff,
+    //   0 0 20px #fff,
+    //   0 0 40px #f00,
+    //   0 0 80px #f00,
+    //   0 0 90px #f00,
+    //   0 0 100px #f00,
+    //   0 0 150px #f00;
   }
+  border-bottom: rgba(255,255,255, 0.5) solid 1px;
 `
 
 
